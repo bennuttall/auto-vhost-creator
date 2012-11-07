@@ -1,4 +1,5 @@
-VHOSTNAME='new_vhost'
+VHOSTNAME='abc'
+SOURCE_PATH="/home/ben/Projects/$VHOSTNAME"
 
 # Copy vhost template
 cp vhost $VHOSTNAME
@@ -7,7 +8,7 @@ cp vhost $VHOSTNAME
 sed -i "s|{VHOSTNAME}|$VHOSTNAME|g" $VHOSTNAME
 
 # Replace "PATH" with the path to the directory
-sed -i "s|{PATH}|/home/ben/Projects/$VHOSTNAME|g" $VHOSTNAME
+sed -i "s|{PATH}|$SOURCE_PATH|g" $VHOSTNAME
 
 # Move the new vhost file to sites-available
 mv $VHOSTNAME /etc/apache2/sites-available/$VHOSTNAME
