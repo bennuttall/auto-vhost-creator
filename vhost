@@ -4,7 +4,7 @@
 	DocumentRoot /home/ben/Projects/{VHOSTNAME}
 	<Directory />
 		Options FollowSymLinks
-		AllowOverride None
+		AllowOverride All
 	</Directory>
 	<Directory /home/ben/Projects/{VHOSTNAME}>
 		Options Indexes FollowSymLinks MultiViews
