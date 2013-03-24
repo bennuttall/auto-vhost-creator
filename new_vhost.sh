@@ -1,4 +1,4 @@
-VHOSTNAME='abc'
+VHOSTNAME=$1
 SOURCE_PATH="/home/ben/Projects/$VHOSTNAME"
 
 # Copy vhost template
@@ -17,7 +17,7 @@ mv $VHOSTNAME /etc/apache2/sites-available/$VHOSTNAME
 a2ensite $VHOSTNAME
 
 # Append the new vhost to the hosts file
-echo "127.0.0.1   $VHOSTNAME" >> /etc/hosts
+echo "127.0.0.1 $VHOSTNAME" >> /etc/hosts
 
 # Restart Apache
 service apache2 restart
