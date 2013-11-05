@@ -41,6 +41,7 @@ Repeat as necessary. If your Projects directory contains the projects ```abc```,
     - Make sure the whole contents are owned by you, with ```chown -R project```
     - Make sure group has permission to read, with ```chmod 755 project```
     - Add the user ```www-data``` to your user's group in ```/etc/group```
+    - NOTE: Changing permissions requires an apache restart (the apache gets its permissions on start)
 - Not Found - if some pages 404:
     - Make sure you have mod_rewrite enabled - ```a2enmod rewrite```
     - Check your ```.htaccess``` file
